@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap");
+:root {
+  --color-font: #222a43;
+  --color-main: #fda900;
+  --color-hover: #cf6a30;
+  --color-info: #4a4e5a;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: var(--color-main);
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.cointainer {
+  background-color: #fff;
+  width: 50%;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(8, 21, 65, 0.23);
+}
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.search-wrapper button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  width: 140px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: var(--color-main);
+  color: #fff;
+}
+.search-wrapper button:hover {
+  background-color: var(--color-hover);
+}
+.search-wrapper input {
+  width: 60%;
+  border: none;
+  outline: none;
+  /* margin-right: 20px; */
+  font-size: 25px;
+  padding: 0 0 0 10px;
+  border-bottom: 3px solid var(--color-main);
+  color: var(--color-font);
+}
+.result {
+  margin-top: 20px;
+}
+.result h3 {
+  text-align: center;
+}
+.result h2 {
+  font-weight: 600;
+  color: var(--color-font);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  margin-bottom: 10px;
+}
+.result .flag-img {
+  display: block;
+  width: 40%;
+  margin: 40px auto 20px;
+}
+.data-wrapper {
+  margin-bottom: 10px;
+}
+.data-wrapper h4 {
+  display: inline;
+  color: var(--color-font);
+}
+.data-wrapper span {
+  color: var(--color-info);
+}
+@media (max-width: 1024px) {
+  .cointainer {
+    width: 60%;
+  }
+  .result .flag-img {
+    width: 300px;
+  }
+}
+@media (max-width: 700px) {
+  .cointainer {
+    width: 70%;
+  }
+  .search-wrapper {
+    flex-direction: column;
+  }
+  .search-wrapper button {
+    margin-top: 15px;
+  }
+  .search-wrapper input {
+    width: 100%;
+  }
+  .data-wrapper h4 {
+    font-size: 20px;
+  }
+  .data-wrapper span {
+    font-size: 18px;
+  }
+  .result .flag-img {
+    width: 200px;
+  }
+}
+@media (max-width: 300px) {
+  .result .flag-img {
+    width: 100px;
+  }
+  .cointainer {
+    width: 80%;
+  }
+}
